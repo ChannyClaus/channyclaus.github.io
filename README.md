@@ -1,4 +1,4 @@
-hi! this is chan and i'm a software engineer based in nyc and this is where i shitpost[^1] ~if you know me irl leave thank you bye i'm just kidding~
+hi! this is chan and i'm a software engineer based in nyc and this is where i shitpost[^1] ~if you know me irl, leave! thank you bye i'm just kidding~
 
 i like backend/infra type work (yas database) so if y'all got something cool that i should check out, feel free to reach out.
 
