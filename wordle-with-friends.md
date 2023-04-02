@@ -6,9 +6,9 @@ so apparnetly [wordle is no longer popular](https://slate.com/human-interest/202
 
 ### prior work
 i did some research first:
-[wordle for friends](https://www.wordleforfriends.com/) lets the user to provide the word to be guessed, but no game state sharing amongst the players. really fun idea, though.
-[wordle with friends](https://wordlewithfriends.app/) the state syncs, but the sync happens at the guess-level, not character-level (seems to be using firebase lol).
-[reactle](https://github.com/cwackerfuss/react-wordle) open source implementation of wordle.
+- [wordle for friends](https://www.wordleforfriends.com/) lets the user to provide the word to be guessed, but no game state sharing amongst the players. really fun idea, though.
+- [wordle with friends](https://wordlewithfriends.app/) the state syncs, but the sync happens at the guess-level, not character-level (seems to be using firebase lol).
+- [reactle](https://github.com/cwackerfuss/react-wordle) open source implementation of wordle.
 
 
 ### implementation
