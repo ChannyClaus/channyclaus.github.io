@@ -21,6 +21,16 @@ since i'm not exactly proficient with react or any frontend framework really so 
 
 here is what i've built: [wordle with friends](https://wordle-with-friends-26qcw2gcuq-uc.a.run.app) (i realize the name is the same as another existing app alas). hitting the root path at that host should generate a new game along with the link that can be shared with those who you want to play with.
 
+the current implementation is based on a listener doing the following:
+1. on key press or click, it sends a broadcast message to the server.
+2. the server relays the above message to all other clients in the same session.
+3. the clients re-renders the board upon receiving the broadcasted message.
+
+i chose the approach above because it seemed more straight-forward to implement than keeping a local state of the game and resolving the conflict on the server side. however, it seems that, as they say, network is not reliable and there would occasionally be times where a key press event doesn't get broadcasted correctly. this is a huge dealbreaker for this app since the user would not see the guess being entered correctly despite having hit the enter key.
+
+currently i'm exploring an approach based on keeping a local state on each client and resolving them via websocket. [this](https://www.figma.com/blog/how-figmas-multiplayer-technology-works/) seems to be quite relevant and i plan on doing some reading, but this approach should be more robust than the current approach since, even if the initial sync may fail, subsequent sync via websocket should resolve the inconsistency soon enough.
+
+
 i tried to keep the setup as dead simple as possible so it's just a docker container running in gcp cloud run. if any of y'all want to help me offset the cost, venmo me at @Channyclaus :.)
 
 ### related
