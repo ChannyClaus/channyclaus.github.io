@@ -2,7 +2,7 @@
 
 # wordle with friends
 ### prologue
-so apparnetly wordle is no longer popular but i only found out about it a month ago bahaha. just like other games, it's a lot more fun to play it with someone else and i can't seem to find an implementation of this online. to be precise, what i want here is multiple people sharing the same game session where the characters typed by one person become immediately visible to other players in the same session.
+so apparnetly [wordle is no longer popular](https://slate.com/human-interest/2022/09/wordle-nytimes-game-users-interview.html) but i only found out about it a month ago bahaha. just like other games, it's a lot more fun to play it with someone else and i can't seem to find an implementation of this online. to be precise, what i want here is multiple people sharing the same game session where the characters typed by one person become immediately visible to other players in the same session.
 
 ### prior work
 i did some research first:
