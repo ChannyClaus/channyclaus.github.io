@@ -1,4 +1,6 @@
+<div style="width:50px; height:50px">
 ![this me](Pikachu.webp "this me")
+</div>
 
 hi! this is chan and i'm a software engineer based in nyc and this is where i shitpost[^1] ~if you know me irl, leave! thank you bye i'm just kidding~
 
