@@ -30,6 +30,8 @@ i chose the approach above because it seemed more straight-forward to implement 
 
 currently i'm exploring an approach based on keeping a local state on each client and resolving them via websocket. [this](https://www.figma.com/blog/how-figmas-multiplayer-technology-works/) seems to be quite relevant and i plan on doing some reading, but this approach should be more robust than the current approach since, even if the initial sync may fail, subsequent sync via websocket should resolve the inconsistency soon enough.
 
+[UPDATE] ignore the above two paragraphs. i had a bug of my own fault that was responsible for this malfunction / sluggishness and at this scale you don't need this implementation seems to be perfectly fine.
+
 
 i tried to keep the setup as dead simple as possible so it's just a docker container running in gcp cloud run. if any of y'all want to help me offset the cost, venmo me at @Channyclaus :.)
 
