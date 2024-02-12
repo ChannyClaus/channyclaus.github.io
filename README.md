@@ -1,11 +1,6 @@
 <img src="Pikachu.webp" alt="Employee data" width="100" height="100" title="this me">
 
-hi! this is chan and i'm a software engineer based in nyc and this is where i shitpost[^1] ~if you know me irl, leave! thank you bye i'm just kidding~
+i'm a software engineer based in nyc.
 
-i like backend/infra type work (yas database) so if y'all got something cool that i should check out, feel free to reach out.
-
-
-`2023-04-02` [wordle with friends](wordle-with-friends.md)
-
-[^1]: `html` is annoying as hell so i'm doing all of this with markdown
+[2024-02-11] made [multiplayer wordle](https://www.wordlewithfriends.club/) where the users sharing same URL can play on the same board together; live syncing of the game state via websocket server written in golang + react on the frontend (copied lots from [this](https://github.com/cwackerfuss/reactle).
 
