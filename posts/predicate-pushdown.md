@@ -13,14 +13,12 @@ INSERT INTO test2 SELECT t, t FROM generate_series(1, 1000000) t;
 
 ANALYZE;
 
-WITH cte AS (
-	SELECT a, sum(a) AS s FROM test GROUP BY a
-)
+WITH cte AS (SELECT a, sum(a) AS s FROM test GROUP BY a)
 SELECT *
   FROM cte
   LEFT JOIN test2 ON cte.a = test2.a
- ORDER BY cte.s DESC
- LIMIT 3;
+ORDER BY cte.s DESC
+LIMIT 3;
 ```
 Conceptually, we can see that the we only need the first three rows from the
 CTE where those rows can be determined very fast via the index on `test.a`.
@@ -51,13 +49,11 @@ but the query planner fails to capture that.
 It runs fast (as it should) if we make a small modification (move the `LIMIT` clause into the CTE):
 ```
 EXPLAIN (ANALYZE TRUE, TIMING TRUE)
- WITH cte AS (
-     SELECT a, sum(a) AS s FROM test GROUP BY a LIMIT 3
- )
- SELECT *
+WITH cte AS (SELECT a, sum(a) AS s FROM test GROUP BY a LIMIT 3)
+SELECT *
    FROM cte
    LEFT JOIN test2 ON cte.a = test2.a
- ORDER BY cte.s DESC
+ORDER BY cte.s DESC
 ```
 which yields
 ```
