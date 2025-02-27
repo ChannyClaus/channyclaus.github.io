@@ -48,7 +48,7 @@ However, running the above with `EXPLAIN (ANALYZE TRUE, TIMING TRUE)` yields:
 Fetching a few rows followed by a left join on indexed rows should definitely NOT take more than a second,
 but the query planner fails to capture that.
 
-It runs fast (as it should) if we make a small modification:
+It runs fast (as it should) if we make a small modification (move the `LIMIT` clause into the CTE):
 ```
 EXPLAIN (ANALYZE TRUE, TIMING TRUE)
  WITH cte AS (
