@@ -1,14 +1,16 @@
 # Gap in PostgreSQL predicate pushdown
 
 Recently at work, there was a slow query that caused daily CPU spikes.
-It minimally reproduces with the latest version of postgres docker image:
+It minimally reproduces with the latest version of postgres docker image
+with the following sequence of statements:
 
 ```
 CREATE TABLE test (a int PRIMARY KEY, b int);
-
 INSERT INTO test SELECT t, t FROM generate_series(1, 1000000) t;
+
 CREATE TABLE test2(a int PRIMARY KEY, c int);
 INSERT INTO test2 SELECT t, t FROM generate_series(1, 1000000) t;
+
 CREATE TABLE test3(a int PRIMARY KEY, d int);
 INSERT INTO test3 SELECT t, t FROM generate_series(1, 1000000) t;
 
