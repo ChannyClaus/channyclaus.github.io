@@ -93,3 +93,5 @@ postgres@localhost:postgres> EXPLAIN (ANALYZE TRUE, TIMING TRUE)
 ```
 This is what we ended up doing for the aforementioned slow query, except it was a lot more complicated
 since there were many more joins in the query (we squeezed `LIMIT` clause for each of these tables).
+
+Maybe I'll dig into the query planner in Postgres sometime to see why it fails to plan efficiently for the first case.
