@@ -45,7 +45,7 @@ However, running the above with `EXPLAIN (ANALYZE TRUE, TIMING TRUE)` yields:
 | Execution Time: 8769.803 ms                                                                                                                                    |
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
-Fetching a few rows followed by two left joins on indexed rows should definitely NOT take more than a second,
+Fetching a few rows followed by a left join on indexed rows should definitely NOT take more than a second,
 but the query planner fails to capture that.
 
 It runs fast (as it should) if we make a small modification:
